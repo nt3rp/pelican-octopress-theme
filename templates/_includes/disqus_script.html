@@ -10,7 +10,7 @@
     {% if INLINE_DISQUSSIONS %}
     <script type="text/javascript">
       disqus_shortname = '{{ DISQUS_SITENAME }}';
-      $(document).ready(function() {
+      jQuery(document).ready(function($) {
         $(".entry-content p").inlineDisqussions();
       });
     </script>
