@@ -7,4 +7,12 @@
 	    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	   })();
 	</script>
+    {% if INLINE_DISQUSSIONS %}
+    <script type="text/javascript">
+      disqus_shortname = '{{ DISQUS_SITENAME }}';
+      $(document).ready(function() {
+        $(".entry-content p").inlineDisqussions();
+      });
+    </script>
+    {% endif %}
 {% endif %}
